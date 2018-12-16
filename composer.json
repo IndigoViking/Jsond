@@ -1,0 +1,40 @@
+{
+    "name": "indigoviking/jsond",
+    "description": "Adds Twig filters for working with json.",
+    "type": "craft-plugin",
+    "version": "1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "jsond"
+    ],
+    "support": {
+        "docs": "https://github.com/IndigoViking/jsond/blob/master/README.md",
+        "issues": "https://github.com/IndigoViking/jsond/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "The Indigo Viking",
+            "homepage": "https://www.theindigoviking.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "indigoviking\\jsond\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Json'd",
+        "handle": "jsond",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/IndigoViking/jsond/master/CHANGELOG.md",
+        "class": "indigoviking\\jsond\\Jsond"
+    }
+}
