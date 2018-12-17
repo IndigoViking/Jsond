@@ -12,6 +12,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Added
 - Updated Decode Parameters
 
-## 1.02 - 2018-12-17
+## 1.03 - 2018-12-17
 ### Added
 - json_decode default return now set to object

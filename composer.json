@@ -2,7 +2,7 @@
     "name": "indigoviking/jsond",
     "description": "Adds Twig filters for working with json.",
     "type": "craft-plugin",
-    "version": "1.02",
+    "version": "1.03",
     "keywords": [
         "craft",
         "cms",
