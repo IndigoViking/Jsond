@@ -63,27 +63,13 @@ class JsondTwigExtension extends \Twig_Extension
      */
     public function jsondecode($json, $type = false, $depth = 512, $options = null)
     {
-	    if ($type == false)
+	    if ($options != null)
 	    {
-		    if ($options != null)
-		    {
-			    $decoded = json_decode($json, true, $depth, $options);
-		    }
-		    else {
-			    $decoded = json_decode($json, true, $depth);
-		    }
+		    $decoded = json_decode($json, $type, $depth, $options);
 	    }
-	    else
-	    {
-		    if ($options != null)
-		    {
-			    $decoded = json_decode($json, false, $depth, $options);
-		    }
-		    else {
-			    $decoded = json_decode($json, false, $depth);
-		    }
+	    else {
+		    $decoded = json_decode($json, $type, $depth);
 	    }
-        
 
         return $decoded;
     }

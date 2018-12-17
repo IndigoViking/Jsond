@@ -30,11 +30,11 @@ Json'd adds 3 twig filters: |json_decode , |json_last_error , and |json_last_err
 
 ### json_decode
 
-Pass a json string to |json_decode and it will return an associative array.
+Pass a json string to |json_decode and it will return an object.
 
 `{{ entry.jsonField|json_decode }}`
 
-To return an object instead of an array, pass a parameter of 'true'.
+To return an array instead of an object, pass a parameter of 'true'.
 
 `{{ entry.jsonField|json_decode('true') }}`
 
@@ -42,7 +42,7 @@ To return an object instead of an array, pass a parameter of 'true'.
 
 `{{ entry.jsonField|json_decode('object/associative', 'depth', 'option') }}`
 
-Object/associative is set to true by default returning an associative array.
+Object/associative is set to false by default returning an object.
 Depth (passed as an integer), sets the depth to which the json is decoded. Default recursion depth in PHP is 512.
 Options available are:
 	JSON_BIGINT_AS_STRING - Decodes large integers as their original string value.
