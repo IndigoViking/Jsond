@@ -39,8 +39,8 @@ class JsondTwigExtension extends \Twig_Extension
     {
         return [
             new \Twig_SimpleFilter('json_decode', [$this, 'jsondecode']),
-            new \Twig_SimpleFilter('json_last_error_msg', [$this, 'jsonEncodeErrorMessage']),
-            new \Twig_SimpleFilter('json_last_error', [$this, 'jsonEncodeError']),
+            new \Twig_SimpleFilter('json_last_error_msg', [$this, 'jsonErrorMessage']),
+            new \Twig_SimpleFilter('json_last_error', [$this, 'jsonError']),
         ];
     }
 
@@ -81,12 +81,12 @@ class JsondTwigExtension extends \Twig_Extension
 	    if ($type == 'encode')
 	    {
 		    json_encode($json);
-		    $error = json_last_error_msg()();
+		    $error = json_last_error_msg();
 	    }
 	    else
 	    {
 		    json_decode($json);
-		    $error = json_last_error_msg()();
+		    $error = json_last_error_msg();
 	    }
 
         return $error;
