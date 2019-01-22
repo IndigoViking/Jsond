@@ -19,3 +19,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 1.04 - 2018-12-17
 ### Added
 - fixed function name errors and error return functions
+
+## 1.05 - 2019-01-21
+### Breaking Change - json_decode is not json_decoded
+- Craft 3.1.3 has added json_decode to it's filters. Json'd json_decode has changed to json_decoded.

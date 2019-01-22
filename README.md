@@ -24,34 +24,34 @@ To install the plugin, follow these instructions.
 
 ## Json'd Overview
 
-Json'd adds 3 twig filters: |json_decode , |json_last_error , and |json_last_error_msg .
+Json'd adds 3 twig filters: |json_decoded , |json_last_error , and |json_last_error_msg .
 
 ## Using Json'd
 
-### json_decode
+### json_decoded
 
-Pass a json string to |json_decode and it will return an object.
+Pass a json string to |json_decoded and it will return an object.
 
-`{{ entry.jsonField|json_decode }}`
+`{{ entry.jsonField|json_decoded }}`
 
 To return an array instead of an object, pass a parameter of 'true'.
 
-`{{ entry.jsonField|json_decode('true') }}`
+`{{ entry.jsonField|json_decoded('true') }}`
 
-|json_decode accepts all of the parameters that the json_decode function in PHP accepts.
+|json_decoded accepts all of the parameters that the json_decoded function in PHP accepts.
 
-`{{ entry.jsonField|json_decode('object/associative', 'depth', 'option') }}`
+`{{ entry.jsonField|json_decoded('object/associative', 'depth', 'option') }}`
 
 Object/associative is set to false by default returning an object.
 Depth (passed as an integer), sets the depth to which the json is decoded. Default recursion depth in PHP is 512.
 Options available are:
 	JSON_BIGINT_AS_STRING - Decodes large integers as their original string value.
-	JSON_OBJECT_AS_ARRAY - Decodes as array. Default of |json_decode.
+	JSON_OBJECT_AS_ARRAY - Decodes as array. Default of |json_decoded.
 	JSON_THROW_ON_ERROR - Throws JsonException if an error occurs instead of setting the global error state that is retrieved with json_last_error().
 
 ### json_last_error_msg
 
-Returns the error string of json_decode.
+Returns the error string of json_decoded.
 
 `{{ entry.jsonField|json_last_error_msg }}`
 
@@ -61,7 +61,7 @@ Accepts 'encode' as a parameter to return the error string of json_encode.
 
 ### json_last_error
 
-Returns the last error of json_decode.
+Returns the last error of json_decoded.
 
 `{{ entry.jsonField|json_last_error }}`
 
@@ -73,7 +73,7 @@ Accepts 'encode' as a parameter to return the last error of json_encode.
 
 To read the full documentation of the PHP functions and their accepted parameters and return values, see these links:
 
-[json_decode](http://php.net/manual/en/function.json-decode.php)
+[json_decoded](http://php.net/manual/en/function.json-decode.php)
 [json_last_error_msg](http://php.net/manual/en/function.json-last-error-msg.php)
 [json_last_error](http://php.net/manual/en/function.json-last-error.php)
 

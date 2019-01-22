@@ -38,7 +38,7 @@ class JsondTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('json_decode', [$this, 'jsondecode']),
+            new \Twig_SimpleFilter('json_decoded', [$this, 'jsondecoded']),
             new \Twig_SimpleFilter('json_last_error_msg', [$this, 'jsonErrorMessage']),
             new \Twig_SimpleFilter('json_last_error', [$this, 'jsonError']),
         ];
@@ -50,7 +50,7 @@ class JsondTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('json_decode', [$this, 'jsondecode']),
+            new \Twig_SimpleFunction('json_decoded', [$this, 'jsondecoded']),
             new \Twig_SimpleFunction('json_last_error_msg', [$this, 'jsonErrorMessage']),
             new \Twig_SimpleFunction('json_last_error', [$this, 'jsonError']),
         ];
@@ -61,7 +61,7 @@ class JsondTwigExtension extends \Twig_Extension
      *
      * @return string
      */
-    public function jsondecode($json, $type = false, $depth = 512, $options = null)
+    public function jsondecoded($json, $type = false, $depth = 512, $options = null)
     {
 	    if ($options != null)
 	    {
